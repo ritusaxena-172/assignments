@@ -1,53 +1,38 @@
 import 'dart:io';
 
-int online(d){
-  int fare,k;
-  print('Online Taxi');
-  if(d<=20)
-  {
-    fare=d*40;
-    print('Fare is');
-    print('40');
-  }
-  else{
-    k=d-20;
-    fare=40+k*10;
-    print('Fare is');
-    print(fare);
-  }
-  return fare;
-  }
+class UberApp
+{
+  int fare;
 
-  int classic(d){
-  int fare,k;
-  print('Classic Taxi');
-  if(d<=20)
-  {
-    fare=d*30;
-    print('Fare is');
-    print('30');
+  int calculateFare(int km, int taxi_type){
+    int remaining;
+    if(taxi_type==40){
+      if(km<=20){
+        fare=km*40;
+        print('Fare is');
+        print(fare);
+      }
+      else{
+        remaining=km-20;
+        fare=40+remaining*10;
+        stdout.write('Fare is');
+        print(fare);
+      }
+      return fare;
+    }
+    else{
+      if(km<=20){
+        fare=km*30;
+        stdout.write('Fare is');
+        print(fare);
+      }
+      else{
+        remaining=km-20;
+        fare=30+15+15*km~/80+15*remaining;
+        print('Fare is');
+        print(fare);
+      }
+      return fare;
+    }
   }
-  else{
-    k=d-20;
-    fare=30+15+15*d~/80+15*k;
-    print('Fare is');
-    print(fare);
-  }
-  return fare;
 }
-void taxi(int d){
-  int i,cl;
-  i=online(d);
-  cl=classic(d);
-  if(i<cl||i==cl)
-  {
-    print('Online Taxi is booked with the fare of \$$i');
-  }
-  else
-  {
-    print('Classic taxi is booked with the fare of \$$cl');
-  }
-  
-}
-  
-  

@@ -1,9 +1,11 @@
 import 'dart:math';
 
+class Lucky {
+  int r;
 void func2()
 {
   Random random = Random();
-  int r = random.nextInt(9)+1;
+  r = random.nextInt(9)+1;
 switch(r){
   case 1: print('You are awesome');
         break;
@@ -24,5 +26,6 @@ switch(r){
   case 9:print('You have received free pizza');
         break;
   case 10:print('You are deprived of citizenship under CAA');
+}
 }
 }

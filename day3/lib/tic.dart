@@ -1,16 +1,26 @@
 
-void tictac(){
-  int i,j;
-  List <int> l1=List();
-  List <int> l2=List();
-  for(i=0;i<3;i++){
+import 'dart:io';
+
+void game(){
+  int row,col,index=0;
+  var tic= [];
+  print('\t\t\t\t------------------Tic Tac Toe----------------\n\n');
+  stdout.write('\t ----------------------------------------------------------------------------------------------- ');
+  for(row = 0;row < 3;row++)
+  {
+    tic.add(<int>[0,0,0]);
+    print('\t\t');
+    stdout.write('\t|');
+    for(col = 0;col < 3;col++)
     {
-      l1[i];
-      for(j=0;j<3;j++)
-      {
-        l2[j]=0;
-        print(l2[j]);
-      }
+      tic[row][col] = index+col+1;
+      stdout.write('\t\t${tic[row][col]}\t\t');
+      stdout.write('|');
     }
+    print('');
+    stdout.write('\t ----------------------------------------------------------------------------------------------- ');
+    index+=3;
   }
+  print('');
+  print('Enter the position');
 }

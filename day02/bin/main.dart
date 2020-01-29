@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:product/Registartion.dart';
 import 'package:product/Toupper.dart';
 import 'package:product/largest.dart';
-import 'package:product/product.dart' as product;
 import 'package:product/table.dart';
 
 import '../lib/product.dart';
