@@ -9,7 +9,7 @@ class UberApp
     if(taxi_type==40){
       if(km<=20){
         fare=km*40;
-        print('Fare is');
+        stdout.write('Fare is');
         print(fare);
       }
       else{
@@ -29,7 +29,7 @@ class UberApp
       else{
         remaining=km-20;
         fare=30+15+15*km~/80+15*remaining;
-        print('Fare is');
+        stdout.write('Fare is');
         print(fare);
       }
       return fare;
