@@ -4,6 +4,6 @@ class Physician extends Services {
   String type='General physician';
 
   void details(){
-    print('Your $type is');
+    print('\tFor $type Service');
   }
 }
