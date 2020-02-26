@@ -1,6 +1,3 @@
-import 'package:dbdummy/login.dart';
-import 'package:dbdummy/verifyphone.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class Signup extends StatefulWidget {
@@ -13,9 +10,11 @@ class _SignupState extends State<Signup> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: SafeArea(
-        child: Formpage(),
+      appBar: AppBar(
+        title: Text('Signup'),
+        backgroundColor: Colors.grey,
       ),
+      body: Formpage(),
     );
   }
 }
@@ -26,9 +25,8 @@ class Formpage extends StatefulWidget {
 }
 
 class _FormpageState extends State<Formpage> {
-  bool secure1 = true;
-  bool secure2 = true;
-  String password, name, email, phone;
+  bool secure = true;
+  String password;
 
   final formKey = GlobalKey<FormState>();
   //above strings are storing the value of each respective field
@@ -38,12 +36,12 @@ class _FormpageState extends State<Formpage> {
   bool _autovalidateemail = false;
   bool _autovalidatepassword = false;
   bool _autoconfirmpassword = false;
-  bool _autovalidatenumber = false;
 
   String nameValidation(String value) {
     if (value != null && value.isEmpty)
       return 'Name cannot be null';
-    else if (value.contains(new RegExp(r'^[0-9]'))) return 'Enter a valid name';
+    else if (value.contains(new RegExp(r'^[0-9]')))
+      return 'Name cannot be a number';
     return null;
   }
 
@@ -67,13 +65,6 @@ class _FormpageState extends State<Formpage> {
   String confirmpassword(String value) {
     if (password != value)
       return 'Password does not matches';
-    else
-      return null;
-  }
-
-  String numberValidation(String value) {
-    if (value.length < 10)
-      return 'Enter a valid phone number';
     else
       return null;
   }
@@ -102,18 +93,17 @@ class _FormpageState extends State<Formpage> {
                 icon: Icon(Icons.person, color: Colors.grey),
               ),
               validator: nameValidation,
-              onChanged: (value) {
-                setState(() {
-                  name = value;
-                });
-              },
+              // onChanged: (value){
+              //   setState(() {
+              //     name=value;
+              //   });
+              // },
             ),
           ),
         ),
         Expanded(
           flex: 1,
           child: Container(
-            decoration: BoxDecoration(shape: BoxShape.rectangle),
             padding: EdgeInsets.all(10),
             margin: EdgeInsets.all(10),
             child: TextFormField(
@@ -129,52 +119,24 @@ class _FormpageState extends State<Formpage> {
                 icon: Icon(Icons.email, color: Colors.grey),
               ),
               validator: emailValidation,
-              onChanged: (value) {
-                setState(() {
-                  email = value;
-                });
-              },
+              // onChanged: (value){
+              //   setState(() {
+              //     email=value;
+              //   });
+              // },
             ),
           ),
         ),
-        //phone number
-        Expanded(
-          flex: 1,
-          child: Container(
-            decoration: BoxDecoration(shape: BoxShape.rectangle),
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.all(10),
-            child: TextFormField(
-              autovalidate: _autovalidatenumber,
-              onEditingComplete: () {
-                setState(() {
-                  _autovalidateemail = true;
-                });
-              },
-              decoration: InputDecoration(
-                labelText: 'Phone number',
-                hintStyle: TextStyle(color: Colors.grey),
-                icon: Icon(Icons.phone, color: Colors.grey),
-              ),
-              validator: numberValidation,
-              onChanged: (value) {
-                setState(() {
-                  phone = value;
-                });
-              },
-            ),
-          ),
-        ),
+
         //for password
 
         Expanded(
           flex: 1,
           child: Container(
-            decoration: BoxDecoration(shape: BoxShape.rectangle),
             padding: EdgeInsets.all(10),
             margin: EdgeInsets.all(10),
             child: TextFormField(
-              obscureText: secure1,
+              obscureText: secure,
               autovalidate: _autovalidatepassword,
               onEditingComplete: () {
                 setState(() {
@@ -188,36 +150,33 @@ class _FormpageState extends State<Formpage> {
                 suffixIcon: IconButton(
                   icon: Icon(
                     // Based on passwordVisible state choose the icon
-                    secure1 ? Icons.visibility : Icons.visibility_off,
+                    secure ? Icons.visibility : Icons.visibility_off,
                     color: Colors.grey,
                   ),
                   onPressed: () {
                     // Update the state i.e. toogle the state of passwordVisible variable
                     setState(() {
-                      secure1 = !secure1;
+                      secure = !secure;
                     });
                   },
                 ),
               ),
               validator: passwordValidation,
-              onChanged: (value) {
-                setState(() {
-                  password = value;
-                });
-              },
+              // onChanged: (value){
+              //   setState(() {
+              //     password=value;
+              //   });
+              // },
             ),
           ),
         ),
         Expanded(
           flex: 1,
           child: Container(
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-            ),
             padding: EdgeInsets.all(10),
             margin: EdgeInsets.all(10),
             child: TextFormField(
-              obscureText: secure2,
+              obscureText: true,
               autovalidate: _autoconfirmpassword,
               onEditingComplete: () {
                 setState(() {
@@ -231,23 +190,23 @@ class _FormpageState extends State<Formpage> {
                 suffixIcon: IconButton(
                   icon: Icon(
                     // Based on passwordVisible state choose the icon
-                    secure2 ? Icons.visibility : Icons.visibility_off,
+                    secure ? Icons.visibility : Icons.visibility_off,
                     color: Colors.grey,
                   ),
                   onPressed: () {
                     // Update the state i.e. toogle the state of passwordVisible variable
                     setState(() {
-                      secure2 = !secure2;
+                      secure = !secure;
                     });
                   },
                 ),
               ),
               validator: confirmpassword,
-              onChanged: (value) {
-                setState(() {
-                  password = value;
-                });
-              },
+              // onChanged: (value){
+              //   setState(() {
+              //     password=value;
+              //   });
+              // },
             ),
           ),
         ),
@@ -259,25 +218,11 @@ class _FormpageState extends State<Formpage> {
               height: 50,
               margin: EdgeInsets.all(10),
               child: RaisedButton(
-                onPressed: () async {
-                  final formState = formKey.currentState;
-                  if (formState.validate()) {
-                    formState.save();
-                    try {
-                      AuthResult user = await FirebaseAuth.instance
-                          .createUserWithEmailAndPassword(
-                              email: email, password: password);
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => VerifyPhone(phone)),
-                      );
-                    } catch (e) {
-                      print(e.message);
-                      // If the form is valid, display a Snackbar.
-                      Scaffold.of(context)
-                          .showSnackBar(SnackBar(content: Text('Successful')));
-                    }
+                onPressed: () {
+                  if (formKey.currentState.validate()) {
+                    // If the form is valid, display a Snackbar.
+                    Scaffold.of(context)
+                        .showSnackBar(SnackBar(content: Text('Successful')));
                   }
                 },
                 child: Text('SignUp'),

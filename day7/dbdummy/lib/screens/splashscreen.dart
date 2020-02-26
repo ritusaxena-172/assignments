@@ -1,9 +1,10 @@
 import 'dart:async';
-
-import 'package:dbdummy/login.dart';
-import 'package:dbdummy/signup.dart';
+import 'package:dbdummy/screens/login.dart';
+import 'package:dbdummy/utils/color_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+
+// import 'login.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         Duration(seconds: 5),
         () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => Login_Screen())));
+            builder: (BuildContext context) => LoginScreen())));
   }
 
   @override
@@ -25,9 +26,8 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Stack(fit: StackFit.expand, children: <Widget>[
         Container(
             decoration: BoxDecoration(
-                //color: Color(0xff162C06),
                 gradient: LinearGradient(
-          colors: [Color(0xff6084c8), Color(0xff872E79)],
+          colors: [firstcolor, secondcolor],
         ))),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
