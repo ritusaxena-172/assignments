@@ -1,10 +1,9 @@
 import 'dart:async';
-import 'package:dbdummy/screens/login.dart';
 import 'package:dbdummy/utils/color_services.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-
-// import 'login.dart';
+import 'loginscreen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -14,10 +13,11 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
-    Timer(
-        Duration(seconds: 5),
-        () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => LoginScreen())));
+    Timer(Duration(seconds: 5), () {
+      FirebaseAuth.instance.signOut();
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (BuildContext context) => LoginScreen()));
+    });
   }
 
   @override
@@ -29,38 +29,40 @@ class _SplashScreenState extends State<SplashScreen> {
                 gradient: LinearGradient(
           colors: [firstcolor, secondcolor],
         ))),
-        Row(
+        Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  child: Icon(
+                    Icons.pets,
+                    size: 50.0,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 10.0),
+                ),
+                Text(
+                  'PawSome',
+                  style: TextStyle(
+                      color: Colors.blue[200],
+                      fontFamily: 'Florsn',
+                      fontSize: 35.0),
+                ),
+              ],
+            ),
             Container(
-              child: Icon(
-                Icons.pets,
-                size: 50.0,
+              margin: EdgeInsets.all(50),
+              padding: EdgeInsets.only(bottom: 10.0),
+              child: SpinKitFadingCube(
+                color: splashcolor,
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 10.0),
-            ),
-            Text(
-              'PawSome',
-              style: TextStyle(
-                  color: Colors.blue[200],
-                  fontFamily: 'Florsn',
-                  fontSize: 35.0),
             ),
           ],
         ),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(bottom: 10.0),
-              child: SpinKitFadingCube(
-                color: Colors.cyan,
-              ),
-            ),
-          ],
-        )
       ]),
     );
   }

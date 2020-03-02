@@ -1,14 +1,12 @@
 String signinemail, signinpassword, signinnewPassword, signinnewPasswordConfirm;
 
-bool signinautovalidateemail = false;
-bool signinautovalidatepassword = false;
-bool signinautoconfirmpassword = false;
-// TextEditingController email = TextEditingController();
-// TextEditingController password = TextEditingController();
-// TextEditingController newPassword = TextEditingController();
-// TextEditingController newPasswordConfirm = TextEditingController();
+bool autovalidateemail = false;
+bool autovalidatepassword = false;
+bool autoconfirmpassword = false;
 bool passwordVisible = true;
 bool newPasswordVisible = true;
 bool newConfirmPasswordVisible = true;
-bool checkBoxValue = false;
-String emailKey = '';
+
+int flag = 0;
+bool loginpress = false;
+bool signuppress = false;
