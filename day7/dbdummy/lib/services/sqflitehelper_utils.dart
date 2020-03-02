@@ -1,3 +1,4 @@
+import 'package:dbdummy/model/sqflite_model.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite/sqlite_api.dart';
 import 'package:path/path.dart';
@@ -34,18 +35,3 @@ class DbDog {
   }
 }
 
-class Dog {
-  int id;
-  String name;
-  String age;
-  String breed;
-  String description;
-  Dog({this.name, this.age, this.breed, id});
-  Map<String, dynamic> toMap() {
-    return {
-      'Name': name,
-      'Age': age,
-      'Breed': breed,
-    };
-  }
-}

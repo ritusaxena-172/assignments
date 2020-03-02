@@ -1,4 +1,5 @@
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:dbdummy/components/appbar_decoration.dart';
 import 'package:dbdummy/screens/aboutus.dart';
 import 'package:dbdummy/screens/buyserscreen.dart';
 import 'package:dbdummy/screens/ownerscreen.dart';
@@ -33,12 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           flexibleSpace: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.bottomLeft,
-                  colors: [firstcolor, secondcolor],
-                  end: Alignment.bottomRight),
-            ),
+            decoration:boxDecoration,
           ),
         ),
         body: Container(

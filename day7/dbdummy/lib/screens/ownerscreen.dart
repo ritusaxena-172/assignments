@@ -1,5 +1,6 @@
+import 'package:dbdummy/components/appbar_decoration.dart';
 import 'package:dbdummy/model/ownerscreen_model.dart';
-import 'package:dbdummy/provider/validators.dart';
+import 'package:dbdummy/model/sqflite_model.dart';
 import 'package:dbdummy/screens/homescreen.dart';
 import 'package:dbdummy/services/sqflitehelper_utils.dart';
 import 'package:dbdummy/utils/color_services.dart';
@@ -40,12 +41,7 @@ class _OwnerPageState extends State<OwnerPage> {
             style: TextStyle(color: light, fontWeight: FontWeight.bold),
           ),
           flexibleSpace: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.bottomLeft,
-                  colors: [firstcolor, secondcolor],
-                  end: Alignment.bottomRight),
-            ),
+            decoration: boxDecoration,
           ),
         ),
         body: Container(

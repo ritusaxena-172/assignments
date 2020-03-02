@@ -1,0 +1,109 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.completeapp"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="28" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/debug/AndroidManifest.xml:6:5-66
+14-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/debug/AndroidManifest.xml:6:22-64
+15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+15-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
+15-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
+16-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-78
+17    <!--
+18 io.flutter.app.FlutterApplication is an android.app.Application that
+19         calls FlutterMain.startInitialization(this); in its onCreate method.
+20         In most cases you can leave this as-is, but you if you want to provide
+21         additional functionality it is fine to subclass or reimplement
+22         FlutterApplication and put your custom class here.
+23    -->
+24    <application
+24-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:8:5-38:19
+25        android:name="io.flutter.app.FlutterApplication"
+25-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:9:9-57
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.1.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/AndroidManifest.xml:24:18-86
+27        android:debuggable="true"
+28        android:icon="@mipmap/ic_launcher"
+28-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:11:9-43
+29        android:label="completeapp" >
+29-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:10:9-36
+30        <provider
+31            android:name="androidx.core.content.FileProvider"
+32            android:authorities="com.example.completeapp.provider"
+33            android:exported="false"
+34            android:grantUriPermissions="true" >
+35            <meta-data
+35-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
+36                android:name="android.support.FILE_PROVIDER_PATHS"
+36-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
+37                android:resource="@xml/provider_paths" />
+37-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
+38        </provider>
+39
+40        <activity
+40-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:21:9-32:20
+41            android:name="com.example.completeapp.MainActivity"
+41-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:22:13-41
+42            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+42-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:25:13-163
+43            android:hardwareAccelerated="true"
+43-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:26:13-47
+44            android:launchMode="singleTop"
+44-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:23:13-43
+45            android:theme="@style/LaunchTheme"
+45-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:24:13-47
+46            android:windowSoftInputMode="adjustResize" >
+46-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:27:13-55
+47            <intent-filter>
+47-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:28:13-31:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:29:17-68
+48-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:29:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:30:17-76
+50-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:30:27-74
+51            </intent-filter>
+52        </activity>
+53        <!--
+54             Don't delete the meta-data below.
+55             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+56        -->
+57        <meta-data
+57-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:35:9-37:33
+58            android:name="flutterEmbedding"
+58-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:36:13-44
+59            android:value="2" />
+59-->/Users/ritu/Desktop/assignment1/day7/completeapp/android/app/src/main/AndroidManifest.xml:37:13-30
+60
+61        <provider
+61-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-19:20
+62            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+62-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-82
+63            android:authorities="com.example.completeapp.flutter.image_provider"
+63-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-74
+64            android:exported="false"
+64-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
+65            android:grantUriPermissions="true" >
+65-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-47
+66            <meta-data
+66-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
+67                android:name="android.support.FILE_PROVIDER_PATHS"
+67-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
+68                android:resource="@xml/flutter_image_picker_file_paths" />
+68-->[:image_picker] /Users/ritu/Desktop/assignment1/day7/completeapp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
+69        </provider>
+70    </application>
+71
+72</manifest>

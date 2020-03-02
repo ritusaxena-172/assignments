@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dbdummy/components/appbar_decoration.dart';
 import 'package:dbdummy/utils/color_services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -28,12 +29,7 @@ class _ConfirmAdoptionState extends State<ConfirmAdoption> {
           style: TextStyle(color: light, fontWeight: FontWeight.bold),
         ),
         flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.bottomLeft,
-                colors: [firstcolor, secondcolor],
-                end: Alignment.bottomRight),
-          ),
+          decoration: boxDecoration,
         ),
       ),
       body: FutureBuilder(

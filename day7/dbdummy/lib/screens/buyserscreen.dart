@@ -1,5 +1,7 @@
 // import 'package:dbdummy/sqqflite.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dbdummy/components/appbar_decoration.dart';
+import 'package:dbdummy/model/sqflite_model.dart';
 import 'package:dbdummy/screens/confirmadoption.dart';
 import 'package:dbdummy/services/sqflitehelper_utils.dart';
 import 'package:dbdummy/utils/color_services.dart';
@@ -33,12 +35,7 @@ class _BuyerScreenState extends State<BuyerScreen> {
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           flexibleSpace: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.bottomLeft,
-                  colors: [firstcolor, secondcolor],
-                  end: Alignment.bottomRight),
-            ),
+            decoration: boxDecoration,
           ),
         ),
         body: FutureBuilder(
