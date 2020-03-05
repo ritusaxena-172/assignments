@@ -1,4 +1,3 @@
-import 'package:dbdummy/model/ownerscreen_model.dart';
 import 'package:dbdummy/model/signup_model.dart';
 import 'package:dbdummy/utils/string_services.dart';
 

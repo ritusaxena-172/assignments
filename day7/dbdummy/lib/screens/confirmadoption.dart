@@ -11,14 +11,14 @@ class ConfirmAdoption extends StatefulWidget {
 }
 
 class _ConfirmAdoptionState extends State<ConfirmAdoption> {
-  // var name;
-  // Future<String> getData() async {
-  //   String uid = (await FirebaseAuth.instance.currentUser()).uid;
-  //   final data =
-  //       await Firestore.instance.collection('users').document(uid).get();
-  //   name = data.data['phone'];
-  //   return name;
-  // }
+  var name;
+  Future<String> getData() async {
+    String uid = (await FirebaseAuth.instance.currentUser()).uid;
+    final data =
+        await Firestore.instance.collection('users').document(uid).get();
+    name = data.data['phone'];
+    return name;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,10 +33,11 @@ class _ConfirmAdoptionState extends State<ConfirmAdoption> {
         ),
       ),
       body: FutureBuilder(
-          future: FirebaseAuth.instance.currentUser(),
+          future: getData(),
           builder: (BuildContext context, AsyncSnapshot snapshot) {
+            String name1;
             if (snapshot.hasData) {
-              return Card(child: Container());
+              return Card(child: Container(child: Text(name1)));
             } else {
               return Text('Error');
             }

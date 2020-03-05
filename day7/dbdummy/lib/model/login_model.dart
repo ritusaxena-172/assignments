@@ -6,7 +6,8 @@ bool autoconfirmpassword = false;
 bool passwordVisible = true;
 bool newPasswordVisible = true;
 bool newConfirmPasswordVisible = true;
+bool isLoading = false;
 
 int flag = 0;
 bool loginpress = false;
-bool signuppress = false;
+//bool signuppress = false;

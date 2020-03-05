@@ -1,9 +1,8 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:dbdummy/components/appbar_decoration.dart';
-import 'package:dbdummy/screens/aboutus.dart';
+import 'package:dbdummy/routes/routes.dart';
 import 'package:dbdummy/screens/buyserscreen.dart';
 import 'package:dbdummy/screens/ownerscreen.dart';
-import 'package:dbdummy/screens/splashscreen.dart';
 import 'package:dbdummy/services/sharedprefs_services.dart';
 import 'package:dbdummy/utils/color_services.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           flexibleSpace: Container(
-            decoration:boxDecoration,
+            decoration: boxDecoration,
           ),
         ),
         body: Container(
@@ -101,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => OwnerPage()));
+                                builder: (context) => OwnerScreen()));
                       },
                       child: Text('Looking for adoption?'),
                       padding: EdgeInsets.all(10),
@@ -151,15 +150,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: ListTile(
                     title: Text('About us'),
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => AboutUs()));
+                      Navigator.pushNamed(context, Routes().aboutUsScreen);
                     })),
             Card(
                 child: ListTile(
                     title: Text('Log Out'),
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => SplashScreen()));
+                      Navigator.pushNamed(context, Routes().splashScreen);
                     }))
           ],
         )));

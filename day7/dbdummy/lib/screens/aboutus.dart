@@ -2,7 +2,7 @@ import 'package:dbdummy/components/appbar_decoration.dart';
 import 'package:dbdummy/utils/color_services.dart';
 import 'package:flutter/material.dart';
 
-class AboutUs extends StatelessWidget {
+class AboutUsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

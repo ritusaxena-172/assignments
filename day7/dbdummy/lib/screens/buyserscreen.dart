@@ -1,15 +1,9 @@
-// import 'package:dbdummy/sqqflite.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dbdummy/components/appbar_decoration.dart';
 import 'package:dbdummy/model/sqflite_model.dart';
-import 'package:dbdummy/screens/confirmadoption.dart';
+import 'package:dbdummy/routes/routes.dart';
 import 'package:dbdummy/services/sqflitehelper_utils.dart';
-import 'package:dbdummy/utils/color_services.dart';
-//import 'package:dbdummy/utils/sqflitehelper_utils.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-// import 'package:dbdummy/owner.dart';
 class BuyerScreen extends StatefulWidget {
   @override
   _BuyerScreenState createState() => _BuyerScreenState();
@@ -57,11 +51,8 @@ class _BuyerScreenState extends State<BuyerScreen> {
                           subtitle:
                               Text('Age: ${doggy.age}\nBreed: ${doggy.breed} '),
                           onTap: () {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ConfirmAdoption()),
-                            );
+                            Navigator.pushNamed(
+                                context, Routes().confirmationScreen);
                           },
                           // Text('image: ${doggy.image}'),
                           //Image.asset(doggy.image),

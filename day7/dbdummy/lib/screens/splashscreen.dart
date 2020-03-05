@@ -1,9 +1,9 @@
 import 'dart:async';
+import 'package:dbdummy/routes/routes.dart';
 import 'package:dbdummy/utils/color_services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'loginscreen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -14,9 +14,9 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 5), () {
+      //signout
       FirebaseAuth.instance.signOut();
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (BuildContext context) => LoginScreen()));
+      Navigator.pushReplacementNamed(context, Routes().temp);
     });
   }
 

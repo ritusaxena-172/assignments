@@ -1,23 +1,21 @@
 import 'package:dbdummy/components/appbar_decoration.dart';
 import 'package:dbdummy/model/ownerscreen_model.dart';
 import 'package:dbdummy/model/sqflite_model.dart';
-import 'package:dbdummy/screens/homescreen.dart';
-import 'package:dbdummy/services/sqflitehelper_utils.dart';
 import 'package:dbdummy/utils/color_services.dart';
-//import 'package:dbdummy/utils/sqflitehelper_utils.dart';
+import 'package:dbdummy/utils/decorations.dart';
 import 'package:dbdummy/utils/string_services.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-class OwnerPage extends StatefulWidget {
+Dog pet;
+final kformKey = GlobalKey<FormState>();
+
+class OwnerScreen extends StatefulWidget {
   @override
-  _OwnerPageState createState() => _OwnerPageState();
+  _OwnerScreenState createState() => _OwnerScreenState();
 }
 
-class _OwnerPageState extends State<OwnerPage> {
-  DbDog _dbDog = DbDog();
-  Dog pet;
-  final kformKey = GlobalKey<FormState>();
+class _OwnerScreenState extends State<OwnerScreen> {
   openCamera(BuildContext context) async {
     image = await ImagePicker.pickImage(source: ImageSource.camera);
     if (image != null) {
@@ -67,9 +65,7 @@ class _OwnerPageState extends State<OwnerPage> {
                     margin: EdgeInsets.all(20),
                     child: TextFormField(
                       decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(80),
-                            borderSide: BorderSide(color: firstcolor)),
+                        enabledBorder: outlineTextFiled,
                         prefixIcon: Icon(
                           Icons.pets,
                           size: 20.0,
@@ -95,9 +91,7 @@ class _OwnerPageState extends State<OwnerPage> {
                     margin: EdgeInsets.all(20),
                     child: TextFormField(
                       decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(80),
-                            borderSide: BorderSide(color: firstcolor)),
+                        enabledBorder: outlineTextFiled,
                         prefixIcon: Icon(
                           Icons.pets,
                           size: 20.0,
@@ -123,9 +117,7 @@ class _OwnerPageState extends State<OwnerPage> {
                     margin: EdgeInsets.all(20),
                     child: TextFormField(
                       decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(80),
-                            borderSide: BorderSide(color: firstcolor)),
+                        enabledBorder: outlineTextFiled,
                         prefixIcon: Icon(
                           Icons.pets,
                           size: 20.0,
@@ -155,28 +147,8 @@ class _OwnerPageState extends State<OwnerPage> {
                     margin: EdgeInsets.all(10),
                     child: RaisedButton(
                       color: firstcolor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(80.0),
-                          side: BorderSide(color: light)),
-                      onPressed: () {
-                        if (kformKey.currentState.validate()) {
-                          Dog dogg = Dog(
-                            name: petName.text,
-                            age: petAge.text,
-                            breed: petBreed.text,
-                          );
-                          _dbDog.insertDog(dogg).then((id) {
-                            petName.clear();
-                            petAge.clear();
-                            petBreed.clear();
-                          });
-                          // print('${dogg.name}');
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => HomeScreen()));
-                        }
-                      },
+                      shape: buttonborder,
+                      onPressed: () {},
                       child: Text('Submit'),
                     ),
                   ),
