@@ -1,8 +1,10 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:dbdummy/components/appbar_decoration.dart';
 import 'package:dbdummy/routes/routes.dart';
+import 'package:dbdummy/screens/buyser2.dart';
 import 'package:dbdummy/screens/buyserscreen.dart';
 import 'package:dbdummy/screens/ownerscreen.dart';
+import 'package:dbdummy/services/firebasestore.dart';
 import 'package:dbdummy/services/sharedprefs_services.dart';
 import 'package:dbdummy/utils/color_services.dart';
 import 'package:flutter/material.dart';
@@ -24,9 +26,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(80),
-          ),
           centerTitle: true,
           title: Text(
             'PawSome!',
@@ -102,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             MaterialPageRoute(
                                 builder: (context) => OwnerScreen()));
                       },
-                      child: Text('Looking for adoption?'),
+                      child: Text('Looking for shelter?'),
                       padding: EdgeInsets.all(10),
                     ),
                   ),
@@ -117,12 +116,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderRadius: new BorderRadius.circular(40.0),
                           side: BorderSide(color: Colors.white)),
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => BuyerScreen()));
+                        Navigator.pushNamed(context, Routes().buyerScreen);
                       },
-                      child: Text('Looking for shelter?'),
+                      child: Text('Looking for adoption?'),
                       padding: EdgeInsets.all(10),
                     ),
                   ),

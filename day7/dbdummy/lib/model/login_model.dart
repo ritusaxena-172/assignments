@@ -8,6 +8,6 @@ bool newPasswordVisible = true;
 bool newConfirmPasswordVisible = true;
 bool isLoading = false;
 
-int flag = 0;
+int flag;
 bool loginpress = false;
 //bool signuppress = false;

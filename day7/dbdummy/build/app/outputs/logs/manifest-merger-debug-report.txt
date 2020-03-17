@@ -5,6 +5,7 @@ INJECTED from /Users/ritu/Desktop/assignment1/day7/dbdummy/android/app/src/main/
 INJECTED from /Users/ritu/Desktop/assignment1/day7/dbdummy/android/app/src/main/AndroidManifest.xml:1:1-30:12
 INJECTED from /Users/ritu/Desktop/assignment1/day7/dbdummy/android/app/src/main/AndroidManifest.xml:1:1-30:12
 MERGED from /Users/ritu/Desktop/assignment1/day7/dbdummy/android/app/src/main/AndroidManifest.xml:1:1-30:12
+MERGED from [:firebase_storage] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_auth] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_auth_web] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_auth_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:cloud_firestore] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
@@ -23,6 +24,7 @@ MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/ritu/.gradle/cache
 MERGED from [com.google.android.gms:play-services-measurement:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/a2d3f38d709f8b9f54c2677fdca8f29a/play-services-measurement-17.2.2/AndroidManifest.xml:17:1-55:12
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/7043a9d5f4a737f3f819087d2037f972/play-services-measurement-sdk-17.2.2/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:15:1-37:12
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/3b0e4fb738c6fb7ad99c4e6500cd1e35/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-iid:20.0.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:17:1-47:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/516d475c610d5ee0701cc5d0e0043980/firebase-auth-interop-19.0.0/AndroidManifest.xml:2:1-10:12
@@ -83,6 +85,8 @@ INJECTED from /Users/ritu/Desktop/assignment1/day7/dbdummy/android/app/src/debug
 		ADDED from /Users/ritu/Desktop/assignment1/day7/dbdummy/android/app/src/main/AndroidManifest.xml:1:11-69
 application
 ADDED from /Users/ritu/Desktop/assignment1/day7/dbdummy/android/app/src/main/AndroidManifest.xml:8:5-29:19
+MERGED from [:firebase_storage] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_storage] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_auth] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_auth] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:cloud_firestore] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
@@ -101,6 +105,8 @@ MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:26:5-34:19
 MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/7043a9d5f4a737f3f819087d2037f972/play-services-measurement-sdk-17.2.2/AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/7043a9d5f4a737f3f819087d2037f972/play-services-measurement-sdk-17.2.2/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:29:5-35:19
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:29:5-35:19
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/3b0e4fb738c6fb7ad99c4e6500cd1e35/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/3b0e4fb738c6fb7ad99c4e6500cd1e35/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-iid:20.0.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:28:5-45:19
@@ -173,6 +179,8 @@ uses-sdk
 INJECTED from /Users/ritu/Desktop/assignment1/day7/dbdummy/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/ritu/Desktop/assignment1/day7/dbdummy/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/ritu/Desktop/assignment1/day7/dbdummy/android/app/src/main/AndroidManifest.xml
+MERGED from [:firebase_storage] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_storage] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth_web] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_auth_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
@@ -209,6 +217,8 @@ MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/7043a9d5f4a737f3f819087d2037f972/play-services-measurement-sdk-17.2.2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/7043a9d5f4a737f3f819087d2037f972/play-services-measurement-sdk-17.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/3b0e4fb738c6fb7ad99c4e6500cd1e35/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/3b0e4fb738c6fb7ad99c4e6500cd1e35/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-iid:20.0.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:20:5-44
@@ -305,6 +315,8 @@ MERGED from [com.google.android.gms:play-services-measurement:17.2.2] /Users/rit
 MERGED from [com.google.android.gms:play-services-measurement:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/a2d3f38d709f8b9f54c2677fdca8f29a/play-services-measurement-17.2.2/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:22:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:27:5-67
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/3b0e4fb738c6fb7ad99c4e6500cd1e35/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/3b0e4fb738c6fb7ad99c4e6500cd1e35/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-iid:20.0.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:23:5-67
@@ -316,7 +328,9 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] /U
 	android:name
 		ADDED from /Users/ritu/Desktop/assignment1/day7/dbdummy/android/app/src/debug/AndroidManifest.xml:6:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_auth] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+ADDED from [:firebase_storage] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_auth] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_auth] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:cloud_firestore] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:cloud_firestore] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_core] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
@@ -325,6 +339,8 @@ MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/ritu/.gradle/cache
 MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:33:9-39:19
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:30:9-34:19
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:30:9-34:19
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/3b0e4fb738c6fb7ad99c4e6500cd1e35/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:17:9-23:19
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/3b0e4fb738c6fb7ad99c4e6500cd1e35/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:17:9-23:19
 MERGED from [com.google.firebase:firebase-iid:20.0.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:29:9-35:19
@@ -338,7 +354,13 @@ MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/ritu/.gradle/cac
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/4550a2082df6b6f48ffc947dd3d08d58/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
 	android:name
-		ADDED from [:firebase_auth] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+		ADDED from [:firebase_storage] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_storage] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_storage] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_storage] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
 meta-data#com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar
 ADDED from [:firebase_auth] /Users/ritu/Desktop/assignment1/day7/dbdummy/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 	android:value
@@ -407,6 +429,8 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.gms:play-services-measurement:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/a2d3f38d709f8b9f54c2677fdca8f29a/play-services-measurement-17.2.2/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/3b0e4fb738c6fb7ad99c4e6500cd1e35/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/3b0e4fb738c6fb7ad99c4e6500cd1e35/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-iid:20.0.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:22:5-79
@@ -487,6 +511,12 @@ ADDED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users/
 		ADDED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:32:17-82
 	android:name
 		ADDED from [com.google.android.gms:play-services-measurement-api:17.2.2] /Users/ritu/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:31:17-139
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:31:13-33:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:33:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:17.0.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/f5d86e0bf88f72a9f0b4c40593c86d9c/jetified-firebase-storage-17.0.0/AndroidManifest.xml:32:17-107
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
 ADDED from [com.google.firebase:firebase-firestore:21.3.0] /Users/ritu/.gradle/caches/transforms-2/files-2.1/3b0e4fb738c6fb7ad99c4e6500cd1e35/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:20:13-22:85
 	android:value

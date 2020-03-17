@@ -1,37 +1,69 @@
 import 'package:dbdummy/model/sqflite_model.dart';
+import 'package:dbdummy/services/firebasestore.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite/sqlite_api.dart';
 import 'package:path/path.dart';
 
-class DbDog {
-  Database _database;
+class DbPet {
   Future openDb() async {
-    if (_database == null) {
-      _database = await openDatabase(join(await getDatabasesPath(), "dog.db"),
+    if (database == null) {
+      print('hello');
+      database = await openDatabase(join(await getDatabasesPath(), "MyApp.db"),
           version: 1, onCreate: (Database db, int version) async {
         await db.execute(
-            " CREATE TABLE dog( id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age TEXT, breed TEXT)");
+            " CREATE TABLE pet( petName TEXT,uid TEXT PRIMARY KEY, petAge TEXT, petBreed TEXT, petDescription TEXT)");
+        print('created table');
       });
     }
+    // else {
+    //   await database.query("DROP TABLE [ IF EXISTS ] pet");
+    //   print('table is deleted');
+    // }
   }
 
-  Future<int> insertDog(Dog dog) async {
+//insertion in sqflite
+  Future<void> insertPet(Map<String, dynamic> data) async {
     await openDb();
-    return await _database.insert('dog', dog.toMap());
-    // conflictAlgorithm: ConflictAlgorithm.replace,
+
+    return await database.insert(
+      'pet',
+      data,
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
   }
 
-  Future<List<Dog>> getDogList() async {
+//retrieve from sqflite
+
+  Future<List<Pet>> getPetList() async {
     await openDb();
-    final List<Map<String, dynamic>> maps = await _database.query('dog');
+    final List<Map<String, dynamic>> maps = await database.query('pet');
     return List.generate(maps.length, (i) {
-      return Dog(
-        id: maps[i]['id'],
-        age: maps[i]['age'],
-        name: maps[i]['name'],
-        breed: maps[i]['breed'],
+      return Pet(
+        petName: maps[i]['petName'],
+        uid: maps[i]['uid'],
+        petAge: maps[i]['petAge'],
+        petBreed: maps[i]['petBreed'],
+        petDescription: maps[i]['petDescription'],
       );
     });
   }
-}
 
+  getList() async {
+    print('inside getpetlist');
+    await openDb();
+    final List<Map<String, dynamic>> maps = await database.query('pet');
+    print(maps);
+    List.generate(maps.length, (i) {
+      return Pet(
+        petName: maps[i]['petName'],
+        uid: maps[i]['uid'],
+        petAge: maps[i]['petAge'],
+        petBreed: maps[i]['petBreed'],
+        petDescription: maps[i]['petDescription'],
+      );
+    });
+  }
+
+//close database
+  Future close() async => database.close();
+}

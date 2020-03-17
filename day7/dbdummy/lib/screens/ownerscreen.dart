@@ -1,13 +1,21 @@
 import 'package:dbdummy/components/appbar_decoration.dart';
 import 'package:dbdummy/model/ownerscreen_model.dart';
 import 'package:dbdummy/model/sqflite_model.dart';
+import 'package:dbdummy/provider/owner.dart';
+import 'package:dbdummy/routes/routes.dart';
+import 'package:dbdummy/screens/signupsignin/widget/signup.dart';
+import 'package:dbdummy/services/firebasestore.dart';
+import 'package:dbdummy/services/sqflitehelper_utils.dart';
 import 'package:dbdummy/utils/color_services.dart';
 import 'package:dbdummy/utils/decorations.dart';
 import 'package:dbdummy/utils/string_services.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:path/path.dart';
 
-Dog pet;
+Pet pet;
+DbPet _dbPet;
 final kformKey = GlobalKey<FormState>();
 
 class OwnerScreen extends StatefulWidget {
@@ -16,17 +24,21 @@ class OwnerScreen extends StatefulWidget {
 }
 
 class _OwnerScreenState extends State<OwnerScreen> {
+  void submit(BuildContext context) {
+    if (kformKey.currentState.validate()) {}
+  }
+
   openCamera(BuildContext context) async {
     image = await ImagePicker.pickImage(source: ImageSource.camera);
     if (image != null) {
       setState(() {
         imagefiles = image;
+        imageList.add(imagefiles);
+        print('image is clicked');
       });
+    } else {
+      print("can't click image");
     }
-  }
-
-  void submit(BuildContext context) {
-    if (kformKey.currentState.validate()) {}
   }
 
   @override
@@ -138,6 +150,32 @@ class _OwnerScreenState extends State<OwnerScreen> {
                     ),
                   ),
                 ),
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.all(20),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        enabledBorder: outlineTextFiled,
+                        prefixIcon: Icon(
+                          Icons.description,
+                          size: 20.0,
+                          color: firstcolor,
+                        ),
+                        hintText: 'Enter your Pets\'s description',
+                      ),
+                      controller: petDescription,
+                      autovalidate: validateDescription,
+                      validator: (value) {
+                        return value.isEmpty ? nullbreed : null;
+                      },
+                      onEditingComplete: () {
+                        setState(() {
+                          validateDescription = true;
+                        });
+                      },
+                    ),
+                  ),
+                ),
 
                 Expanded(
                   child: Container(
@@ -148,7 +186,12 @@ class _OwnerScreenState extends State<OwnerScreen> {
                     child: RaisedButton(
                       color: firstcolor,
                       shape: buttonborder,
-                      onPressed: () {},
+                      onPressed: () {
+                        onPressOwner(context);
+                        // _dbDog.deleteTable();
+                        //Navigator.pushNamed(context, Routes().homeScreen);
+                        // onPressOwner2(context);
+                      },
                       child: Text('Submit'),
                     ),
                   ),

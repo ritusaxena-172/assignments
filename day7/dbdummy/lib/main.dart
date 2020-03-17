@@ -1,8 +1,10 @@
 import 'package:dbdummy/routes/routes.dart';
 import 'package:dbdummy/screens/aboutus.dart';
+import 'package:dbdummy/screens/buyser2.dart';
 import 'package:dbdummy/screens/buyserscreen.dart';
 import 'package:dbdummy/screens/confirmadoption.dart';
 import 'package:dbdummy/screens/homescreen.dart';
+import 'package:dbdummy/screens/homescreen2.dart';
 
 import 'package:dbdummy/screens/ownerscreen.dart';
 
@@ -29,9 +31,9 @@ class Myapp extends StatelessWidget {
       initialRoute: route.splashScreen,
       routes: {
         route.splashScreen: (context) => SplashScreen(),
-        route.homeScreen: (context) => HomeScreen(),
+        route.homeScreen: (context) => HomeScreen2(),
         route.ownerScreen: (context) => OwnerScreen(),
-        route.buyerScreen: (context) => BuyerScreen(),
+        route.buyerScreen: (context) => BuyerScreenn(),
         route.confirmationScreen: (context) => ConfirmAdoption(),
         route.aboutUsScreen: (context) => AboutUsScreen(),
         route.temp: (context) => TabLoginController(),
